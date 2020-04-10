@@ -10,13 +10,13 @@ minute = now.minute
 
 while True:   
         if second == 59:
-                second = second - 59
-                minute = minute + 1
+            second = second - 59
+            minute = minute + 1
         else:
-                time.sleep(1)
-                second = second + 1
-
+            time.sleep(1)
+            second = second + 1
         print(hour, minute, second)
+        
 while True:
         if minute == 59:
                 minute = minute - 59
