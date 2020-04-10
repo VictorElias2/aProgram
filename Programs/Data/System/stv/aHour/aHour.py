@@ -1,7 +1,7 @@
 import time
-
-
 from datetime import datetime
+
+
 now = datetime.now()
 second = now.second
 hour = now.hour
