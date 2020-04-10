@@ -211,7 +211,12 @@ else:
         print()
         while iniciosy == "addex" or iniciosy == "start addex" or iniciosy == "start aProgram":
                 inicio = input("--> ")
-                if inicio == "cal" or inicio == "calculator":
+                if armazenamento == 0 or armazenamento < 0:
+                    print("GLOBAL ERROR STORAGE")
+                    print("PLEASE, CONTACT THE SUPORT IN THIS E-MAIL: aprogram@gmail.com")
+                    time.sleep(5)
+                    quit()
+                elif inicio == "cal" or inicio == "calculator":
                     print("Opening calculator...")
                     time.sleep(2)
                     print()
@@ -359,7 +364,7 @@ else:
                         armazenamento = armazenamento + tamanhoasystem
                         time.sleep(1) 
                         print("Successfully uninstalled!")        
-                elif inicio == "uninstall DreamWorld" and dream == 1:
+                elif inicio == "uninstall aDreamWorld" and dream == 1:
                     if dream == 0:
                         print("Sorry, we didn't find 'aDreamWorld' in your tools.")
                         print()
@@ -638,15 +643,15 @@ else:
                             if dream > 1:
                                 print("Erro 060")
                                 print()
-                                print("Digite 'help' para mais informações")
+                                print("Type 'help' for more informations")
                                 print()
                                 print()
                             else:
-                                print("Baixando...")
+                                print("Downloading...")
                                 time.sleep(5)
-                                print("Instalando...")
+                                print("Installing...")
                                 time.sleep(6)
-                                print("Pronto!")
+                                print("Ready!")
                                 armazenamento = armazenamento - tamanhodream
                                 ferramentas = ferramentas + 1
                                 aplicativos.append("aDreamWorld")   #Programa mostrado na tools
@@ -924,9 +929,17 @@ else:
                 elif inicio == "notifications":
                     print("Searching notifications...")
                     time.sleep(2)
-                elif inicio == "help uninstall programs":
-                    print("Por favor, leia as informações no arquivo 'help' que se localiza em: ")
-                    print("Operating System-> Programs-> Data-> Help")
+                elif inicio == "help programs":
+                    print("Opening...")
+                    time.sleep(2)
+                    print("To install: ")
+                    print("To install a program, you have to go on store and type:\n'install [program name]' wait for download and ready!")
+                    separador()
+                    print("To uninstall: ")
+                    print("To uninstall a program, you have go to '-->' and type 'uninstall [program name]' wait for uninstall and ready!")
+                    separador()
+                    print("To see your programs: ")
+                    print("For see your programs you have to go '-->' and type tools")
                     print()
                     print()
                 elif inicio == "command tools":
