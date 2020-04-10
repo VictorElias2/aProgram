@@ -1,3 +1,6 @@
+#ATENTION -- ALL VARIABLES ARE IN PORTUGUESE(BRAZIL) AND I CAN'T CHANGE NOW. SORRY. ;)
+#-------------------------------------------------------------------------------------
+
 #Bibliotecas importadas
 import time
 import os
@@ -9,7 +12,7 @@ def separador():
     print("-"*30)
 
 #Tamanho do Armazenamento do sistema
-armazenamento = 15.00
+armazenamento = 2.00
 
 #Começo do Sistema Operacional
 #Variáveis do tipo de usuário
