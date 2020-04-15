@@ -399,13 +399,12 @@ else:
                         ferramentas = ferramentas - 1
                         print("Successfully uninstalled!")          
                 elif inicio == "con":
-                    print("Open compatibilidade...")
-                    #PAREI AQUI A TRADUÇÃO
+                    print("Open compatibility...")
                     time.sleep(4)
                     print("aProgram version-> {}".format(versao))
                     print("Developed by Victor Elias")
                     print("Command: Model {} Designed by Victor Elias".format(systemModel))
-                    print("Todos os direitos reservados © 2020")
+                    print("All rights reserved © 2020")
                     print("Username-> {}".format(nome))
                     time.sleep(10)
                 elif inicio == "hour":
@@ -527,15 +526,20 @@ else:
                     print("Within 'cal' type:")
                     print("'mul' for multiplication / 'div' for division / 'ad' for addition / 'sub' for subtraction")
                     print()     #separação da calculadora
-                    print("For time and date, just 'date' for date and 'hour' for hours")
-                    print("The 'con' code is for model compatibility and details")
+                    print("For time and date, just 'date' for date and 'hour' for hours.")
+                    print("The 'con' code is for model compatibility and details.")
                     print("The code 'psc' is used to put a message on the screen and say how many seconds it will be exposed.")
-                    print("The 'off' code just shuts down the system")
-                    print("The 'sys' code shows the user and the system")
-                    print("The flashoff code turns off the ultra-fast system")
-                    print("The 'store' code opens the system store")
+                    print("The 'off' code just shuts down the system.")
+                    print("The 'sys' code shows the user and the system.")
+                    print("The flashoff code turns off the ultra-fast system.")
+                    print("The 'store' code opens the system store.")
+                    print("The 'tools' command show for you all programs that there in aProgram.")
+                    print("The 'info system' code show informations of aProgram.")
+                    print("The 'info user' code show informations of {}.".format(nome))
+                    separador()
+                    print("In 'store' type 'dir [name of program]' and appears the program informations.")
                     print("More information on the website:")
-                    print("----------------------------")
+                    separador()
                     print()     #separação para os erros
                     print("Errors: ")
                     print("Error 010 - It is some wrong code or wrong character")
@@ -544,9 +548,9 @@ else:
                     print("Error 050 - When typed incorrectly from the calculator")
                     print("Error 060 - When installed two or more programs")
                     print("Error 070 - Incorrect command in the aProgram store")
-                    print("In case of unknown errors please contact them through the email below:")
-                    print("aprogram@gmail.com")
-                    print("----------------------------")
+                    #print("In case of unknown errors please contact them through the email below:")
+                    #print("aprogram@gmail.com")
+                    separador()
                     print()
                     print()
                 elif inicio == "dev info":
@@ -556,6 +560,8 @@ else:
                     separador()
                     print("Instagram: @victor_elias2")
                     sleep.time(4)
+                    print()
+                    print()
                 elif inicio == "flashoff":
                     print("Ending programs...")
                     print("Logging out of {}".format(nome))
@@ -578,7 +584,7 @@ else:
                 elif inicio == "tools":
                     print("You have {} tools".format(ferramentas))
                     print("Your storage is %sMB" % (armazenamento))
-                    print("Go to Store, there you can download more tools ..")
+                    print("Go to Store, you can download more tools ..")
                     print("Command--> store)")
                     print()
                     print("Your tools: ")
@@ -720,7 +726,7 @@ else:
                         elif winstalar == "dir F":
                             print("Description: {}".format(descricaoF))
                             print("Version: {}".format(versaoF))
-                            print("To donwload, please type 'install '")
+                            print("To donwload, please type 'install F' in command store")
                             print()
                         elif winstalar == "dir store":
                             print("Download programs to make your aProgram more attractive!")
@@ -759,7 +765,8 @@ else:
                     time.sleep(2)
                     print("Broken")
                     while True:
-                        r = r * 999599997999699899998999548568899
+                        r = r * 999599997999699899998999548568899145525884
+                        print("This is NOT normal.")
                         print(r)
                         r+=1
                 elif inicio == "open aMédia" and appmedia == 1:
@@ -897,7 +904,7 @@ else:
                     time.sleep(0.2)
                     print("Username-> {}".format(nome))
                     print("User tip-> {}".format(usertip))
-                elif inicio == "info sys":      #informação do sistema
+                elif inicio == "info system":      #informação do sistema
                   print("Opening System...")
                   time.sleep(2)
                   print("Version: {}".format(versao))
@@ -928,6 +935,7 @@ else:
                     #Mais tarde!
                 elif inicio == "notifications":
                     print("Searching notifications...")
+                    print("Sorry, this function is comming!")
                     time.sleep(2)
                 elif inicio == "help programs":
                     print("Opening...")
@@ -942,7 +950,7 @@ else:
                     print("For see your programs you have to go '-->' and type tools")
                     print()
                     print()
-                elif inicio == "command tools":
+                elif inicio == "dir":
                   print("[calculator]")
                   time.sleep(0.1)
                   print("[psc]")

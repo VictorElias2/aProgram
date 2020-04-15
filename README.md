@@ -17,6 +17,8 @@ Like more codes
 'con'
 'hour'
 'date'
+'help'
+'help programs' - **Use this command to understand: How download programs in aProgram?**
 
 
 To use aSystem:
