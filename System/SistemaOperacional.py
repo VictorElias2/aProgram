@@ -504,13 +504,13 @@ else:
                             os.startfile("C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
                             print()
                             print()
-                        elif wos == "open os notepad":
+                        elif wos == "open os Notepad":
                             print("Abrindo notepad...")
                             time.sleep(2)
                             os.startfile("notepad.exe")
                             print()
                             print()
-                        elif wos == "open os internet explorer":
+                        elif wos == "open os Internet Explorer":
                             print("Opening Internet Explorer...")
                             time.sleep(2)
                             os.startfile("C:\Program Files\internet explorer\iexplore.exe")
