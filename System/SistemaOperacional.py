@@ -505,7 +505,7 @@ else:
                             print()
                             print()
                         elif wos == "open os Notepad":
-                            print("Abrindo notepad...")
+                            print("Opening notepad...")
                             time.sleep(2)
                             os.startfile("notepad.exe")
                             print()
