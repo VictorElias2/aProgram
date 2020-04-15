@@ -1,5 +1,5 @@
-# aprogram
-All files of aProgram 1.0
+# aProgram
+View more about the aProgram!
 
 aProgram is a program or a game that simulates a command operating system. 
 The commands are simple, not complex like DOS, in aProgram you can use a calculator, leave a message on the screen, open limited programs on your computer, and other more functions and interactions. 
