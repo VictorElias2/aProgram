@@ -107,7 +107,7 @@ armazenamento = armazenamento - tamanhosistema
 time.sleep(1)
 nome = input("Username: ")
 if nome == "admin":
-    erroInesperado = " :( THERE WAS A PROBLEM WHEN STARTING THE SYSTEM"
+    erroInesperado = " :( THERE A PROBLEM WHEN STARTING THE SYSTEM"
     a = 1
     while True:
         a = a + 1000
