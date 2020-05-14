@@ -837,9 +837,13 @@ else:
                     	print()
                        	print("RandomNumber generates a random number of your choice.")
                         time.sleep(2)
-	                    qNumberRandons = int(input("How much numbers are you want?"))
-	                    randomNumber1 = int(input("Random Number Starts-> "))
-	                    randomNumber2 = int(input("Random Number Ends-> "))
+						try:
+							qNumberRandons = int(input("How much numbers are you want?"))
+							randomNumber1 = int(input("Random Number Starts-> "))
+							randomNumber2 = int(input("Random Number Ends-> "))
+						except:
+							print("Error")
+							print("This error message is a test.")
                        	if randomNumber1 > randomNumber2:
                        		print("Sorry, but we find an error.")
                        		print("Type in the 'Random Number Starts->' a number less 'Random Number Ends->'")
