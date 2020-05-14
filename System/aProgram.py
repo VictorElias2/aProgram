@@ -838,6 +838,7 @@ else:
                         print()
                         print("RandomNumber generates a random number of your choice.")
                         time.sleep(2)
+<<<<<<< HEAD
                         qNumberRandons = int(input("How much numbers are you want?"))
                         randomNumber1 = int(input("Random Number Starts-> "))
                         randomNumber2 = int(input("Random Number Ends-> "))
@@ -853,6 +854,28 @@ else:
                                 print("The random number is-> {}".format(generateRandomNumber))
                             else:
                                 print("The randons numbers are-> {}".format(generateRandomNumber))
+=======
+						try:
+							qNumberRandons = int(input("How much numbers are you want?"))
+							randomNumber1 = int(input("Random Number Starts-> "))
+							randomNumber2 = int(input("Random Number Ends-> "))
+						except:
+							print("Error")
+							print("This error message is a test.")
+                       	if randomNumber1 > randomNumber2:
+                       		print("Sorry, but we find an error.")
+                       		print("Type in the 'Random Number Starts->' a number less 'Random Number Ends->'")
+                       	else:
+	                       	while tNumbersRandons < qNumberRandons:
+	                       		generateRandomNumber = random.randint(randomNumber1, randomNumber2)
+	                       		randomNumbersList.append(generateRandomNumber)
+	                       		tNumbersRandons += 1
+	                       	generateRandomNumber.sort()
+	                       	if len(generateRandomNumber) > 1:
+	                       		print("The random number is-> {}".format(generateRandomNumber))
+	                       	else:
+	                       		print("The randons numbers are-> {}".format(generateRandomNumber))
+>>>>>>> b8162f40f01233e9c7900415d3871b1c29f4d507
                 elif inicio == "open aDreamWorld" and dream == 1:
                     if dream == 0:
                         print("ERROR")
