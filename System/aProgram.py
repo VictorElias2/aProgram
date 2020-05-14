@@ -7,10 +7,12 @@ import os
 import math
 import random
 
-#Funções
+#Fuctions
 def separador():
     print("-"*30)
-
+def separadorLinha():
+    print()
+    print()
 #Tamanho do Armazenamento do sistema
 armazenamento = 2.00
 
@@ -42,6 +44,12 @@ systemModel = random.randint(000, 999)
 #Fim das variáveis do tipo de usuário
 
 #Começo das variáveis globais
+#Variaveis RandomNumber
+tamanhoRandomNumber = 0.24
+appRandomNumber = 0
+versaoRandomNumber = 1.0
+descricaoRandomNumber = "Generate random numbers in your choice."
+randomNumbersList = []
 #Variaveis do aSystem
 tamanhoasystem = 0.34
 descricaoasystem = "You will now be able to open some programs directly from aProgram"
@@ -100,7 +108,6 @@ diaevento = 0
 horasevento = "Nothing..."
 sobreevento = "Nothing..."
 #Fim das variáveis globais
-
 #começo do sitema
 armazenamento = armazenamento - tamanhosistema
 
@@ -323,7 +330,7 @@ else:
                     quit()
                 elif inicio == "psc":
                     note = input("Nota: ")
-                    wp = int(input("Quanto tempo?: "))
+                    wp = int(input("How much time on screen?: "))
                     time.sleep(0.5)
                     print()
                     print(note)
@@ -363,7 +370,19 @@ else:
                         ferramentas = ferramentas - 1
                         armazenamento = armazenamento + tamanhoasystem
                         time.sleep(1) 
-                        print("Successfully uninstalled!")        
+                        print("Successfully uninstalled!")
+                elif inicio == "uninstall RandomNumber":
+                    if appRandomNumber == 0:
+                        print("Sorry, we didn't find 'RandomNumber' in your tools.")
+                        print("Please, install in the store.")
+                        separadorLinha() 
+                    else:
+                        print("Uninstalling...")
+                        time.sleep(random.randint(2, 4))
+                        appRandomNumber = appRandomNumber - 1
+                        armazenamento = armazenamento + tamanhoRandomNumber
+                        ferramentas = ferramentas - 1
+                        aplicativos.remove("RandomNumber")
                 elif inicio == "uninstall aDreamWorld" and dream == 1:
                     if dream == 0:
                         print("Sorry, we didn't find 'aDreamWorld' in your tools.")
@@ -632,7 +651,7 @@ else:
                         time.sleep(0.1)
                         print("[ºF]")
                         time.sleep(0.1)
-                        print("[aPersentage]")
+                        print("[RandomNumber]")
                         time.sleep(0.1)
                         print()
                         print("--Comming--")
@@ -713,20 +732,41 @@ else:
                                 armazenamento = armazenamento - tamanhoasystem 
                                 aplicativos.append("aSystem")
                         #Instalação do app
+                        elif winstalar == "install RandomNumber":
+                            if appsystem > 1:
+                                print("Error 060")
+                                print()
+                                print("Type 'help' for more informations")
+                                print()
+                                print()
+                            else:
+                                print("Downloading...")
+                                time.sleep(3.4)
+                                print("Installing...")
+                                time.sleep(5.2)
+                                print("Ready!")
+                                ferramentas+=1
+                                appRandomNumber+=1
+                                armazenamento = armazenamento - tamanhoRandomNumber
+                                aplicativos.append("RandomNumber")
+                        elif winstalar == "dir RandomNumber":
+                            print("Description: {}".format(descricaoRandomNumber))
+                            print("Version: {}".format(versaoRandomNumber))
+                            print("To donwload, please type 'install RandomNumber' in command of store")
                         elif winstalar == "dir aDreamWorld":
                             print("Description: {}".format(descricaodream))
                             print("Version: {}".format(versaodream))
-                            print("To download, please type 'install aDreamWorld' in command store")
+                            print("To download, please type 'install aDreamWorld' in commando of store")
                             print()
                         elif winstalar == "dir aMédia":
                             print("Description: {}".format(descricaomedia))
                             print("Version: {}".format(versaoappmedia))
-                            print("To download, please type 'install aMédia' in command store.")
+                            print("To download, please type 'install aMédia' in command of store.")
                             print()
                         elif winstalar == "dir F":
                             print("Description: {}".format(descricaoF))
                             print("Version: {}".format(versaoF))
-                            print("To donwload, please type 'install F' in command store")
+                            print("To donwload, please type 'install F' in command of store")
                             print()
                         elif winstalar == "dir store":
                             print("Download programs to make your aProgram more attractive!")
@@ -786,6 +826,33 @@ else:
                         print("Note %d: %6.2f" % (x, notas[x]))
                         x+=1
                     print("Média: %5.2f" % (soma/x))
+                elif inicio == "open RandomNumber" and appRandomNumber == 1:
+                    if appRandomNumber == 0:
+                        print("ERROR")
+                        print("PROGRAM NOT FOUND")
+                        print()
+                        print()
+                    else:
+                    	tNumbersRandons = 0
+                    	print()
+                       	print("RandomNumber generates a random number of your choice.")
+                        time.sleep(2)
+	                    qNumberRandons = int(input("How much numbers are you want?"))
+	                    randomNumber1 = int(input("Random Number Starts-> "))
+	                    randomNumber2 = int(input("Random Number Ends-> "))
+                       	if randomNumber1 > randomNumber2:
+                       		print("Sorry, but we find an error.")
+                       		print("Type in the 'Random Number Starts->' a number less 'Random Number Ends->'")
+                       	else:
+	                       	while tNumbersRandons < qNumberRandons:
+	                       		generateRandomNumber = random.randint(randomNumber1, randomNumber2)
+	                       		randomNumbersList.append(generateRandomNumber)
+	                       		tNumbersRandons += 1
+	                       	generateRandomNumber.sort()
+	                       	if len(generateRandomNumber) > 1:
+	                       		print("The random number is-> {}".format(generateRandomNumber))
+	                       	else:
+	                       		print("The randons numbers are-> {}".format(generateRandomNumber))
                 elif inicio == "open aDreamWorld" and dream == 1:
                     if dream == 0:
                         print("ERROR")
