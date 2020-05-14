@@ -10,6 +10,7 @@ import random
 #Fuctions
 def separador():
     print("-"*30)
+
 def separadorLinha():
     print()
     print()
@@ -310,7 +311,7 @@ else:
                             print()
                         except ValueError:
                             print("This command is not valid")
-                    elif wcal == "close":
+                    elif wcal == "close" or wcal == "cancel":
                         print("Closing...")
                         time.sleep(0.5)
                         print("Ready.")
@@ -816,7 +817,7 @@ else:
                     print()
                     notas = [0,0,0,0,0]
                     soma = 0
-                    x = 0	
+                    x = 0
                     while x<5:
                         notas[x] = float(input("Note %d: " % x))
                         soma += notas[x]
@@ -833,26 +834,25 @@ else:
                         print()
                         print()
                     else:
-                    	tNumbersRandons = 0
-                    	print()
-                       	print("RandomNumber generates a random number of your choice.")
+                        tNumbersRandons = 0
+                        print()
+                        print("RandomNumber generates a random number of your choice.")
                         time.sleep(2)
-	                    qNumberRandons = int(input("How much numbers are you want?"))
-	                    randomNumber1 = int(input("Random Number Starts-> "))
-	                    randomNumber2 = int(input("Random Number Ends-> "))
-                       	if randomNumber1 > randomNumber2:
-                       		print("Sorry, but we find an error.")
-                       		print("Type in the 'Random Number Starts->' a number less 'Random Number Ends->'")
-                       	else:
-	                       	while tNumbersRandons < qNumberRandons:
-	                       		generateRandomNumber = random.randint(randomNumber1, randomNumber2)
-	                       		randomNumbersList.append(generateRandomNumber)
-	                       		tNumbersRandons += 1
-	                       	generateRandomNumber.sort()
-	                       	if len(generateRandomNumber) > 1:
-	                       		print("The random number is-> {}".format(generateRandomNumber))
-	                       	else:
-	                       		print("The randons numbers are-> {}".format(generateRandomNumber))
+                        qNumberRandons = int(input("How much numbers are you want?"))
+                        randomNumber1 = int(input("Random Number Starts-> "))
+                        randomNumber2 = int(input("Random Number Ends-> "))
+                        if randomNumber1 > randomNumber2:
+                            print("Sorry, but we find an error.")
+                            print("Type in the 'Random Number Starts->' a number less 'Random Number Ends->'")
+                        else:
+                            while tNumbersRandons < qNumberRandons:
+                                generateRandomNumber = random.randint(randomNumber1, randomNumber2)
+                                randomNumbersList.append(generateRandomNumber)
+                                tNumbersRandons += 1
+                            if len(generateRandomNumber) > 1:
+                                print("The random number is-> {}".format(generateRandomNumber))
+                            else:
+                                print("The randons numbers are-> {}".format(generateRandomNumber))
                 elif inicio == "open aDreamWorld" and dream == 1:
                     if dream == 0:
                         print("ERROR")
