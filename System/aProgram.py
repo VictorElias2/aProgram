@@ -144,6 +144,7 @@ if nome == "admin":
             print()
             time.sleep(3)
             quit()
+
 elif nome == "":
     print("Erro")
     print()
@@ -208,6 +209,14 @@ else:
         print("Engine--> {}".format(engine))
         print("Storage--> {}".format(armazenamento))
         print("Created in {}".format(linguagemsys))
+        time.sleep(15)
+        quit()
+    elif iniciosy == "help":
+        print("'addex' or 'start aProgram' commands starts the explorator of aProgram")
+        print("This is a MS-DOS simulator, so he has a calculator, you can view date and hour, see messages in the aDreamWorld program, and open limited files on your computer like\n Google Chrome, Notepad and Internet Explorer.")
+        time.sleep(15)
+        print("Exiting...")
+        close()
     elif iniciosy == "flashoff":
         print("Logging out of {}\n Model--> {}".format(nome, systemModel))
         print("Turning off...")
@@ -217,7 +226,7 @@ else:
         print("Type the command 'help' for more information!")
         print()
         print()
-        while iniciosy == "addex" or iniciosy == "start addex" or iniciosy == "start aProgram":
+        if iniciosy == "addex" or iniciosy == "start addex" or iniciosy == "start aProgram":
                 inicio = input("--> ")
                 if armazenamento == 0 or armazenamento < 0:
                     print("GLOBAL ERROR STORAGE")
@@ -506,7 +515,7 @@ else:
                     print("...")
                     print("Exiting...")
                     time.sleep(0.1)
-                    break
+                    quit()
                 elif inicio == "open aSystem" and appsystem == 1:
                     if appsystem == 0:
                         print("ERROR SYSTEM")
@@ -639,166 +648,162 @@ else:
                         print()
                     #Começo da loja (store)
                 elif inicio == "store":
-                    if armazenamento < 1.00:
-                        print("Sorry, your storage is out of space.")
-                        print()
-                        print()
-                    else:
-                        print("[aDreamWorld]")
-                        time.sleep(0.1)
-                        print("[aMédia]")
-                        time.sleep(0.1)
-                        print("[aSystem]")
-                        time.sleep(0.1)
-                        print("[ºF]")
-                        time.sleep(0.1)
-                        print("[RandomNumber]")
-                        time.sleep(0.1)
-                        print()
-                        print("--Comming--")
-                        time.sleep(0.1)
-                        print("[Community]")
-                        time.sleep(0.1)
-                        print("More programs will be added soon")
-                        time.sleep(0.1)
-                        print()
-                        winstalar = input("aStore--> ")
-                        print()
-                        if winstalar == "install aDreamWorld":
-                            dream = dream + 1
-                            if dream > 1:
-                                print("Erro 060")
-                                print()
-                                print("Type 'help' for more informations")
-                                print()
-                                print()
-                            else:
-                                print("Downloading...")
-                                time.sleep(5)
-                                print("Installing...")
-                                time.sleep(6)
-                                print("Ready!")
-                                armazenamento = armazenamento - tamanhodream
-                                ferramentas = ferramentas + 1
-                                aplicativos.append("aDreamWorld")   #Programa mostrado na tools
-                        elif winstalar == "install F":
-                            if appF > 1:
-                                print("Error 060")
-                                print()
-                                print("Type 'help' for more information.")
-                                print()
-                                print()
-                            else:
-                                print("Downloading...")
-                                time.sleep(4)
-                                print("Installing...")
-                                time.sleep(2)
-                                print("Ready!")
-                                armazenamento = armazenamento - tamanhoF
-                                ferramentas = ferramentas + 1
-                                appF = appF + 1
-                                aplicativos.append("ºF")
-                        elif winstalar == "install aMédia":
-                            if appmedia > 1:
-                                print("Error 060")
-                                print()
-                                print("Type 'help' for more informations")
-                                print()
-                                print()
-                            else:
-                                print("Downloading...")
-                                time.sleep(7)
-                                print("Installing...")
-                                time.sleep(6)
-                                print("Ready!")
-                                appmedia = appmedia + 1
-                                armazenamento = armazenamento - tamanhomedia
-                                ferramentas = ferramentas + 1
-                                aplicativos.append("aMédia")    #Programa mostrado na tools
-                        elif winstalar == "install aSystem":
-                            if appsystem > 1:
-                                print("Error 060")
-                                print()
-                                print("Type 'help' for more informations")
-                                print()
-                                print()
-                            else:
-                                print("Downloading...")
-                                time.sleep(15)
-                                print("Installing...")
-                                time.sleep(8)
-                                print("Ready!")
-                                ferramentas = ferramentas + 1
-                                appsystem = appsystem + 1
-                                armazenamento = armazenamento - tamanhoasystem 
-                                aplicativos.append("aSystem")
-                        #Instalação do app
-                        elif winstalar == "install RandomNumber":
-                            if appsystem > 1:
-                                print("Error 060")
-                                print()
-                                print("Type 'help' for more informations")
-                                print()
-                                print()
-                            else:
-                                print("Downloading...")
-                                time.sleep(3.4)
-                                print("Installing...")
-                                time.sleep(5.2)
-                                print("Ready!")
-                                ferramentas+=1
-                                appRandomNumber+=1
-                                armazenamento = armazenamento - tamanhoRandomNumber
-                                aplicativos.append("RandomNumber")
-                        elif winstalar == "dir RandomNumber":
-                            print("Description: {}".format(descricaoRandomNumber))
-                            print("Version: {}".format(versaoRandomNumber))
-                            print("To donwload, please type 'install RandomNumber' in command of store")
-                        elif winstalar == "dir aDreamWorld":
-                            print("Description: {}".format(descricaodream))
-                            print("Version: {}".format(versaodream))
-                            print("To download, please type 'install aDreamWorld' in commando of store")
-                            print()
-                        elif winstalar == "dir aMédia":
-                            print("Description: {}".format(descricaomedia))
-                            print("Version: {}".format(versaoappmedia))
-                            print("To download, please type 'install aMédia' in command of store.")
-                            print()
-                        elif winstalar == "dir F":
-                            print("Description: {}".format(descricaoF))
-                            print("Version: {}".format(versaoF))
-                            print("To donwload, please type 'install F' in command of store")
-                            print()
-                        elif winstalar == "dir store":
-                            print("Download programs to make your aProgram more attractive!")
-                            print("Download programs created by the community!")
-                            print("And be happy exploring the STORE!")
-                            print("Want to submit your project? Send us an email!")
-                            print("aprogram@gmail.com")
-                            print()
-                            print()
-                        elif winstalar == "close app":
-                            print()
-                            print()
-                        elif winstalar == "cancel":
-                            print("Cancelled!")
-                            print()
-                            print()
-                        elif winstalar == "close":
-                            print()
-                            print()
-                        elif winstalar == "":
-                            print("Erro 010")
-                            print()
-                            print("Type 'help' for more informations")
+                    while True:                 #Loop infinito para o proprio usuário fechar com o comando 'close'
+                        separadorLinha()
+                        if armazenamento < 1.00:
+                            print("Sorry, your storage is out of space.")
                             print()
                             print()
                         else:
-                            print("Erro 070")
+                            print("[aDreamWorld]")
+                            time.sleep(0.1)
+                            print("[aMédia]")
+                            time.sleep(0.1)
+                            print("[aSystem]")
+                            time.sleep(0.1)
+                            print("[ºF]")
+                            time.sleep(0.1)
+                            print("[RandomNumber]")
+                            time.sleep(0.1)
                             print()
-                            print("For more informations, please type 'help'")
+                            print("--Comming--")
+                            time.sleep(0.1)
+                            print("[Community]")
+                            time.sleep(0.1)
+                            print("More programs will be added soon")
+                            time.sleep(0.1)
                             print()
+                            winstalar = input("aStore--> ")
                             print()
+                            if winstalar == "install aDreamWorld":
+                                dream = dream + 1
+                                if dream > 1:
+                                    print("Erro 060")
+                                    print()
+                                    print("Type 'help' for more informations")
+                                    print()
+                                    print()
+                                else:
+                                    print("Downloading...")
+                                    time.sleep(5)
+                                    print("Installing...")
+                                    time.sleep(6)
+                                    print("Ready!")
+                                    armazenamento = armazenamento - tamanhodream
+                                    ferramentas = ferramentas + 1
+                                    aplicativos.append("aDreamWorld")   #Programa mostrado na tools
+                            elif winstalar == "install F":
+                                if appF > 1:
+                                    print("Error 060")
+                                    print()
+                                    print("Type 'help' for more information.")
+                                    print()
+                                    print()
+                                else:
+                                    print("Downloading...")
+                                    time.sleep(4)
+                                    print("Installing...")
+                                    time.sleep(2)
+                                    print("Ready!")
+                                    armazenamento = armazenamento - tamanhoF
+                                    ferramentas = ferramentas + 1
+                                    appF = appF + 1
+                                    aplicativos.append("ºF")
+                            elif winstalar == "install aMédia":
+                                if appmedia > 1:
+                                    print("Error 060")
+                                    print()
+                                    print("Type 'help' for more informations")
+                                    print()
+                                    print()
+                                else:
+                                    print("Downloading...")
+                                    time.sleep(7)
+                                    print("Installing...")
+                                    time.sleep(6)
+                                    print("Ready!")
+                                    appmedia = appmedia + 1
+                                    armazenamento = armazenamento - tamanhomedia
+                                    ferramentas = ferramentas + 1
+                                    aplicativos.append("aMédia")    #Programa mostrado na tools
+                            elif winstalar == "install aSystem":
+                                if appsystem > 1:
+                                    print("Error 060")
+                                    print()
+                                    print("Type 'help' for more informations")
+                                    print()
+                                    print()
+                                else:
+                                    print("Downloading...")
+                                    time.sleep(15)
+                                    print("Installing...")
+                                    time.sleep(8)
+                                    print("Ready!")
+                                    ferramentas = ferramentas + 1
+                                    appsystem = appsystem + 1
+                                    armazenamento = armazenamento - tamanhoasystem 
+                                    aplicativos.append("aSystem")
+                            #Instalação do app
+                            elif winstalar == "install RandomNumber":
+                                if appsystem > 1:
+                                    print("Error 060")
+                                    print()
+                                    print("Type 'help' for more informations")
+                                    print()
+                                    print()
+                                else:
+                                    print("Downloading...")
+                                    time.sleep(3.4)
+                                    print("Installing...")
+                                    time.sleep(5.2)
+                                    print("Ready!")
+                                    ferramentas+=1
+                                    appRandomNumber+=1
+                                    armazenamento = armazenamento - tamanhoRandomNumber
+                                    aplicativos.append("RandomNumber")
+                            elif winstalar == "dir RandomNumber":
+                                print("Description: {}".format(descricaoRandomNumber))
+                                print("Version: {}".format(versaoRandomNumber))
+                                print("To donwload, please type 'install RandomNumber' in command of store")
+                            elif winstalar == "dir aDreamWorld":
+                                print("Description: {}".format(descricaodream))
+                                print("Version: {}".format(versaodream))
+                                print("To download, please type 'install aDreamWorld' in commando of store")
+                                print()
+                            elif winstalar == "dir aMédia":
+                                print("Description: {}".format(descricaomedia))
+                                print("Version: {}".format(versaoappmedia))
+                                print("To download, please type 'install aMédia' in command of store.")
+                                print()
+                            elif winstalar == "dir F":
+                                print("Description: {}".format(descricaoF))
+                                print("Version: {}".format(versaoF))
+                                print("To donwload, please type 'install F' in command of store")
+                                print()
+                            elif winstalar == "dir store":
+                                print("Download programs to make your aProgram more attractive!")
+                                print("Download programs created by the community!")
+                                print("And be happy exploring the STORE!")
+                                print("Want to submit your project? Send us an email!")
+                                print("aprogram@gmail.com")
+                                print()
+                                print()
+                            elif winstalar == "help" or winstalar == "h":
+                                print("To install a program, please type 'install <program name>\n Or if you want about any program, please type 'dir <program name'")
+                            elif winstalar == "close app" or "cancel" or "c" or "close":
+                                break
+                            elif winstalar == "":
+                                print("Erro 010")
+                                print()
+                                print("Type 'help' for more informations")
+                                print()
+                                print()
+                            else:
+                                print("Erro 070")
+                                print()
+                                print("For more informations, please type 'help'")
+                                print()
+                                print()
                             #Fim da loja
                 elif inicio == "u-- install -v- sys- virusNumber":
                     r = 0
@@ -827,7 +832,7 @@ else:
                         print("Note %d: %6.2f" % (x, notas[x]))
                         x+=1
                     print("Média: %5.2f" % (soma/x))
-                elif inicio == "open RandomNumber" and appRandomNumber == 1:
+                elif inicio == "open RandomNumber" or inicio == "open RN" or inicio == "open rn" and appRandomNumber == 1:
                     if appRandomNumber == 0:
                         print("ERROR")
                         print("PROGRAM NOT FOUND")
@@ -838,7 +843,6 @@ else:
                         print()
                         print("RandomNumber generates a random number of your choice.")
                         time.sleep(2)
-<<<<<<< HEAD
                         qNumberRandons = int(input("How much numbers are you want?"))
                         randomNumber1 = int(input("Random Number Starts-> "))
                         randomNumber2 = int(input("Random Number Ends-> "))
@@ -850,32 +854,7 @@ else:
                                 generateRandomNumber = random.randint(randomNumber1, randomNumber2)
                                 randomNumbersList.append(generateRandomNumber)
                                 tNumbersRandons += 1
-                            if len(generateRandomNumber) > 1:
-                                print("The random number is-> {}".format(generateRandomNumber))
-                            else:
-                                print("The randons numbers are-> {}".format(generateRandomNumber))
-=======
-						try:
-							qNumberRandons = int(input("How much numbers are you want?"))
-							randomNumber1 = int(input("Random Number Starts-> "))
-							randomNumber2 = int(input("Random Number Ends-> "))
-						except:
-							print("Error")
-							print("This error message is a test.")
-                       	if randomNumber1 > randomNumber2:
-                       		print("Sorry, but we find an error.")
-                       		print("Type in the 'Random Number Starts->' a number less 'Random Number Ends->'")
-                       	else:
-	                       	while tNumbersRandons < qNumberRandons:
-	                       		generateRandomNumber = random.randint(randomNumber1, randomNumber2)
-	                       		randomNumbersList.append(generateRandomNumber)
-	                       		tNumbersRandons += 1
-	                       	generateRandomNumber.sort()
-	                       	if len(generateRandomNumber) > 1:
-	                       		print("The random number is-> {}".format(generateRandomNumber))
-	                       	else:
-	                       		print("The randons numbers are-> {}".format(generateRandomNumber))
->>>>>>> b8162f40f01233e9c7900415d3871b1c29f4d507
+                            print("The randons numbers are-> {}".format(randomNumbersList))
                 elif inicio == "open aDreamWorld" and dream == 1:
                     if dream == 0:
                         print("ERROR")
@@ -1082,7 +1061,7 @@ else:
                     print("Type 'help' for more informations")
                     print()
                     print()
-        if iniciosy != "addex":
+        elif iniciosy != "addex":
             print()
             print("GLOBAL ERROR")
             print()
