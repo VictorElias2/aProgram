@@ -224,7 +224,7 @@ else:
         print("Type the command 'help' for more information!")
         print()
         print()
-        if iniciosy == "addex" or iniciosy == "start addex" or iniciosy == "start aProgram":
+        while iniciosy == "addex" or iniciosy == "start addex" or iniciosy == "start aProgram":
                 inicio = input("--> ")
                 if armazenamento == 0 or armazenamento < 0:
                     print("GLOBAL ERROR STORAGE")
@@ -552,14 +552,14 @@ else:
                         elif wos == "close app":
                             print()
                             print()
-                elif inicio == "help" or inicio == "h":
+                elif inicio == "help":
                     print("Opening help...")
                     time.sleep(2)
                     print("Calculator:")
                     print("Command: cal")
                     print("Within 'cal' type:")
                     print("'mul' for multiplication / 'div' for division / 'ad' for addition / 'sub' for subtraction")
-                    print()     #separação da calculadora
+                    print("-------------------------------------------------------")
                     print("For time and date, just 'date' for date and 'hour' for hours.")
                     print("The 'con' code is for model compatibility and details.")
                     print("The code 'psc' is used to put a message on the screen and say how many seconds it will be exposed.")
@@ -569,11 +569,11 @@ else:
                     print("The 'store' code opens the system store.")
                     print("The 'tools' command show for you all programs that there in aProgram.")
                     print("The 'info system' code show informations of aProgram.")
-                    print("The 'info user' code show informations of {}.".format(nome))
-                    separador()
+                    print("The 'info user' code show informations of %s" % nome)
+                    print("-------------------------------------------------------")
                     print("In 'store' type 'dir [name of program]' and appears the program informations.")
                     print("More information on the website:")
-                    separador()
+                    print("-------------------------------------------------------")
                     print()     #separação para os erros
                     print("Errors: ")
                     print("Error 010 - It is some wrong code or wrong character")
@@ -584,7 +584,7 @@ else:
                     print("Error 070 - Incorrect command in the aProgram store")
                     print("In case of unknown errors or bugs please contact them through the email below:")
                     print("victorfalciroli966@gmail.com")
-                    separador()
+                    print("-------------------------------------------------------")
                     print()
                     print()
                 elif inicio == "dev info":
@@ -1066,7 +1066,7 @@ else:
                     print("Type 'help' for more informations")
                     print()
                     print()
-        elif iniciosy != "addex":
+        if iniciosy != "addex":
             print()
             print("GLOBAL ERROR")
             print()
