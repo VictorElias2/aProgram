@@ -349,7 +349,7 @@ else:
                     print("Time limit reached...")
                     print() 
                     print()
-                elif inicio == "root system" or "root":
+                elif inicio == "root system" or inicio == "root":
                     perCQ = input("This command goes uninstall all programs, you want continue?(Y/n)-> ")
                     if perCQ == "y" or perCQ == "Y":
                         while True:
@@ -552,7 +552,7 @@ else:
                         elif wos == "close app":
                             print()
                             print()
-                elif inicio == "help":
+                elif inicio == "help" or inicio == "h":
                     print("Opening help...")
                     time.sleep(2)
                     print("Calculator:")
