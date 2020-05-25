@@ -369,7 +369,6 @@ else:
                             print()
                             break
                     elif perCQ == "n" or perCQ == "N":
-                        continue
                         separadorLinha()
                     else:
                         print("Please, try again. (Y for yes or N for no)")
