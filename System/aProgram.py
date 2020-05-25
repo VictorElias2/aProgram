@@ -552,7 +552,7 @@ else:
                         elif wos == "close app":
                             print()
                             print()
-                elif inicio == "help" or inicio == "h":
+                elif inicio == "help":
                     print("Opening help...")
                     time.sleep(2)
                     print("Calculator:")
