@@ -111,7 +111,6 @@ sobreevento = "Nothing..."
 #Fim das variáveis globais
 #começo do sitema
 armazenamento = armazenamento - tamanhosistema
-
 time.sleep(1)
 nome = input("Username: ")
 if nome == "admin":
@@ -144,7 +143,6 @@ if nome == "admin":
             print()
             time.sleep(3)
             quit()
-
 elif nome == "":
     print("Erro")
     print()
@@ -213,10 +211,10 @@ else:
         quit()
     elif iniciosy == "help":
         print("'addex' or 'start aProgram' commands starts the explorator of aProgram")
-        print("This is a MS-DOS simulator, so he has a calculator, you can view date and hour, see messages in the aDreamWorld program, and open limited files on your computer like\n Google Chrome, Notepad and Internet Explorer.")
+        print("This is a MS-DOS simulator, so he has a calculator, you can view date and hour, see messages in the aDreamWorld program, and open limited files on your computer like Google Chrome, Notepad and Internet Explorer.")
         time.sleep(15)
         print("Exiting...")
-        close()
+        quit()
     elif iniciosy == "flashoff":
         print("Logging out of {}\n Model--> {}".format(nome, systemModel))
         print("Turning off...")
@@ -230,7 +228,7 @@ else:
                 inicio = input("--> ")
                 if armazenamento == 0 or armazenamento < 0:
                     print("GLOBAL ERROR STORAGE")
-                    print("PLEASE, CONTACT THE SUPORT IN THIS E-MAIL: aprogram@gmail.com")
+                    print("PLEASE, CONTACT THE SUPORT IN THIS E-MAIL: victorfalciroli966@gmail.com")
                     time.sleep(5)
                     quit()
                 elif inicio == "cal" or inicio == "calculator":
@@ -351,23 +349,31 @@ else:
                     print("Time limit reached...")
                     print() 
                     print()
-                elif inicio == "root system":
-                    while True:
-                        print("Restarting...")
-                        time.sleep(6)
-                        print(rootoff)
-                        time.sleep(5)
-                        print(root)
-                        time.sleep(4)
-                        print(check)
-                        time.sleep(2)
-                        print(ready)
-                        time.sleep(3)
-                        print(restart)
-                        time.sleep(5)
-                        print()
-                        print()
-                        break
+                elif inicio == "root system" or "root":
+                    perCQ = input("This command goes uninstall all programs, you want continue?(Y/n)-> ")
+                    if perCQ == "y" or perCQ == "Y":
+                        while True:
+                            print("Restarting...")
+                            time.sleep(6)
+                            print(rootoff)
+                            time.sleep(5)
+                            print(root)
+                            time.sleep(4)
+                            print(check)
+                            time.sleep(2)
+                            print(ready)
+                            time.sleep(3)
+                            print(restart)
+                            time.sleep(5)
+                            print()
+                            print()
+                            break
+                    elif perCQ == "n" or perCQ == "N":
+                        continue
+                        separadorLinha()
+                    else:
+                        print("Please, try again. (Y for yes or N for no)")
+                        separadorLinha1()
                 elif inicio == "uninstall aSystem" and appsystem == 1:
                     if appsystem == 0:
                         print("Sorry, we didn't find 'aSystem' in your tools.")
@@ -577,8 +583,8 @@ else:
                     print("Error 050 - When typed incorrectly from the calculator")
                     print("Error 060 - When installed two or more programs")
                     print("Error 070 - Incorrect command in the aProgram store")
-                    #print("In case of unknown errors please contact them through the email below:")
-                    #print("aprogram@gmail.com")
+                    print("In case of unknown errors or bugs please contact them through the email below:")
+                    print("victorfalciroli966@gmail.com")
                     separador()
                     print()
                     print()
@@ -785,7 +791,7 @@ else:
                                 print("Download programs created by the community!")
                                 print("And be happy exploring the STORE!")
                                 print("Want to submit your project? Send us an email!")
-                                print("aprogram@gmail.com")
+                                print("victorfalciroli966@gmail.com")
                                 print()
                                 print()
                             elif winstalar == "help" or winstalar == "h":
