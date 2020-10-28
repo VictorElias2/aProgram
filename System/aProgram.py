@@ -1,4 +1,4 @@
-#ATENTION -- ALL VARIABLES ARE IN PORTUGUESE(BRAZIL) AND I CAN'T CHANGE NOW. SORRY. ;)
+#WARNING -- ALL VARIABLES ARE IN PORTUGUESE(BRAZIL) AND I CAN'T CHANGE NOW. SORRY. ;)
 #-------------------------------------------------------------------------------------
 
 #Bibliotecas importadas
