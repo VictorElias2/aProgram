@@ -42,6 +42,7 @@ else:
     print()
     print()
     print("Exiting...")
+    time.sleep(2)
     quit()
 
 systemModel = random.randint(000, 999)
@@ -536,7 +537,8 @@ else:
                     print()
                     print()
                 else:
-                    print("Abrindo...")
+                    print("Opening...")
+                    print("This program maybe be run with error, the path may is not correct.")
                     time.sleep(2)
                     wos = input("aSystem--> ")
                     if wos == "open os Google Chrome":
