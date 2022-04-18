@@ -138,11 +138,9 @@ if nome == "admin":
             time.sleep(5)
             print("Error is FALSE")
             break
-            time.sleep(2)
-            print()
         elif resolveerror != "comand -system os- RESOLVE ERROR S paste systems/errors/comand/resolve/end is = True" and "off system":
             print()
-            print("Comando errado, tente novamente.")
+            print("Wrong command, try again.")
             print()
             print()
         else:
@@ -339,9 +337,9 @@ else:
                     print()
                     print()
             elif inicio == "off":
-                print("Fazendo logoff de {}".format(nome))
+                print("Doing the logoff for {}".format(nome))
                 time.sleep(1)
-                print("Desligando...")
+                print("Powering off...")
                 time.sleep(3)
                 quit()
 
